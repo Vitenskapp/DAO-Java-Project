@@ -6,13 +6,17 @@ import Model.Entities.Department;
 import Model.Entities.Seller;
 
 import java.util.Date;
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
 
-        Integer id = 3;
+        Scanner scanner = new Scanner(System.in);
 
         SellerDAO sellerDAO = DaoFactory.createSellerDAO();
+        System.out.println("[ Testing method: Seller findById ]");
+        System.out.println("Insert a id: ");
+        Integer id = scanner.nextInt();
 
         Seller seller = sellerDAO.findById(id);
 
