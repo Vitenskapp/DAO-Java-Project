@@ -67,6 +67,7 @@ public class Database {
 
             Properties properties = new Properties();
             properties.load(fileInputStream);
+
             return properties;
 
         } catch(IOException ioException) {
