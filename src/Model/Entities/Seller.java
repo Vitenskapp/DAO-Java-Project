@@ -1,6 +1,5 @@
 package Model.Entities;
 
-import javax.xml.crypto.Data;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
@@ -20,6 +19,14 @@ public class Seller implements Serializable {
     private Department department;
 
     public Seller() {
+    }
+
+    public Seller(String name, String email, Date birthDate, Double baseSalary, Department department) {
+        this.name = name;
+        this.email = email;
+        this.birthDate = birthDate;
+        this.baseSalary = baseSalary;
+        this.department = department;
     }
 
     public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
