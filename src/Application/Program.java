@@ -13,10 +13,14 @@ public class Program {
     public static void main(String[] args) {
 
         SellerDAO sellerDAO = DaoFactory.createSellerDAO();
+        SellerDAO sellerDAO1 = DaoFactory.createSellerDAO();
 
         List<Seller> sellersList = sellerDAO.findByDepartment(new Department(2, "Eletronics"));
+        List<Seller> allSellersList = sellerDAO1.findAll();
 
-        System.out.println(sellersList);
+        for(Seller sel : allSellersList) {
+            System.out.println(sel);
+        }
 
     }
 }
