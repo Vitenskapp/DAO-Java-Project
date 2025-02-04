@@ -18,7 +18,11 @@ public class Program {
 
         SellerDAO sellerDAO = DaoFactory.createSellerDAO();
 
-        sellerDAO.insert(new Seller("Leonardo", "leozinho123@gmail.com", new Date("21/11/2005"), 5000.0, new Department(2, "Eletronics")));
+        Seller seller = sellerDAO.findById(17);
+
+        seller.setName("Leonardo");
+
+        sellerDAO.update(seller);
 
     }
 }
