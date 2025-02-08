@@ -1,6 +1,7 @@
 package Application;
 
 import Model.DAO.DaoFactory;
+import Model.DAO.DepartmentDAO;
 import Model.DAO.SellerDAO;
 import Model.Entities.Department;
 import Model.Entities.Seller;
@@ -16,13 +17,11 @@ public class Program {
 
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
-        SellerDAO sellerDAO = DaoFactory.createSellerDAO();
+        DepartmentDAO departmentDAO = DaoFactory.createDepartmentDAO();
 
-        Seller seller = sellerDAO.findById(17);
+        Department department = departmentDAO.findById(2);
 
-        seller.setName("Leonardo");
-
-        sellerDAO.update(seller);
+        System.out.println(department);
 
     }
 }
