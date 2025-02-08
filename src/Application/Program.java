@@ -19,9 +19,7 @@ public class Program {
 
         DepartmentDAO departmentDAO = DaoFactory.createDepartmentDAO();
 
-        Department department = departmentDAO.findById(2);
-
-        System.out.println(department);
+        departmentDAO.update(new Department(16, "Computers"));
 
     }
 }
